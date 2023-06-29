@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const uri = "cole aqui seu link do cluster"
+const uri = "mongodb+srv://dbuser:dbuser@cluster0.ifp08n7.mongodb.net/"
 const { MongoClient }= require('mongodb-legacy')
 const ObjectId = require('mongodb-legacy').ObjectId
 
