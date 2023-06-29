@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu editar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Editar Registro</h2>
+    <% crud.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+        <input type="text" value="<%= details.name %>" name="name">
+        <input type="text" value="<%= details.surname %>" name="surname">
+        <br/>
+        <button><a href="/show">Todos</a></button>
+        <button type="submit">Salvar</button>
+    </form>
+    <% }) %>
+</body>
+
+</html>
